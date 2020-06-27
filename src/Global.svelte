@@ -26,7 +26,7 @@
   });
 </script>
 
-<h3>Global({as_of})</h3>
+<h3 class="display-4">Global({as_of})</h3>
 <Card title="Total confirmed" text={total_confirmed} textstyle="text-warning" />
 <Card title="New confirmed" text={new_confirmed} textstyle="text-warning" />
 <Card title="Total recovered" text={total_recovered} textstyle="text-success" />

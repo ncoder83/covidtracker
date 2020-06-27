@@ -20,19 +20,39 @@
   });
 </script>
 
-<h3>Breakdown by Countries ({as_of})</h3>
+<h3 class="display-4">Countries ({as_of})</h3>
+
+<input type="text" class="form-control" placeholder="Filter countries" />
 {#each countries as country}
-  <b>Name: {country.Country}</b>
-  <br />
-  New confirmed: {country.NewConfirmed}
-  <br />
-  New Recovered: {country.NewRecovered}
-  <br />
-  New Deaths: {country.NewDeaths}
-  <br />
-  Total Confirmed: {country.TotalConfirmed}
-  <br />
-  Total Recovered: {country.TotalRecovered}
-  <br />
-  Total Deaths: {country.TotalDeaths}
+  <ul class="list-unstyled">
+    <li>
+      <b>Name: {country.Country}</b>
+      <ul>
+        <li>
+          New confirmed:
+          <span class="text-warning">{country.NewConfirmed}</span>
+        </li>
+        <li>
+          Total Confirmed:
+          <span class="text-warning">{country.TotalConfirmed}</span>
+        </li>
+        <li>
+          New Recovered:
+          <span class="text-success">{country.NewRecovered}</span>
+        </li>
+        <li>
+          Total Recovered:
+          <span class="text-success">{country.TotalRecovered}</span>
+        </li>
+        <li>
+          New Deaths:
+          <span class="text-danger">{country.NewDeaths}</span>
+        </li>
+        <li>
+          Total Deaths:
+          <span class="text-danger">{country.TotalDeaths}</span>
+        </li>
+      </ul>
+    </li>
+  </ul>
 {/each}
