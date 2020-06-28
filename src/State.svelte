@@ -102,34 +102,37 @@ totalTestsViral: 101792 -->
     </span>
     <span class="float-right text-info">data quality:</span>
   </h4>
-  <table class="table table-bordered">
-    <thead class="thead-dark">
-      <tr>
-        <th>Cases</th>
-        <th>Tests negative</th>
-        <th>Tests pending</th>
-        <th>Hospitalized currently</th>
-        <th>Hospitalized cumulative</th>
-        <th>In ICU currently</th>
-        <th>In ICU cumulative</th>
-        <th>On Ventilator currently</th>
-        <th>Recovered</th>
-        <th>Deaths</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>{state.positive || 'N/A'}</td>
-        <td>{state.negative || 'N/A'}</td>
-        <td>{state.pending || 'N/A'}</td>
-        <td>{state.hospitalizedCurrently || 'N/A'}</td>
-        <td>{state.hospitalizedCumulative || 'N/A'}</td>
-        <td>{state.inIcuCurrently || 'N/A'}</td>
-        <td>{state.inIcuCumulative || 'N/A'}</td>
-        <td>{state.onVentilatorCurrently || 'N/A'}</td>
-        <td>{state.recovered || 'N/A'}</td>
-        <td>{state.death || 'N/A'}</td>
-      </tr>
-    </tbody>
-  </table>
+
+  <div class="table-responsive">
+    <table class="table table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th>Cases</th>
+          <th>Tests negative</th>
+          <th>Tests pending</th>
+          <th>Hospitalized currently</th>
+          <th>Hospitalized cumulative</th>
+          <th>In ICU currently</th>
+          <th>In ICU cumulative</th>
+          <th>On Ventilator currently</th>
+          <th>Recovered</th>
+          <th>Deaths</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{state.positive || 'N/A'}</td>
+          <td>{state.negative || 'N/A'}</td>
+          <td>{state.pending || 'N/A'}</td>
+          <td>{state.hospitalizedCurrently || 'N/A'}</td>
+          <td>{state.hospitalizedCumulative || 'N/A'}</td>
+          <td>{state.inIcuCurrently || 'N/A'}</td>
+          <td>{state.inIcuCumulative || 'N/A'}</td>
+          <td>{state.onVentilatorCurrently || 'N/A'}</td>
+          <td>{state.recovered || 'N/A'}</td>
+          <td>{state.death || 'N/A'}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 {/each}
