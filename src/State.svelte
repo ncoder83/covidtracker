@@ -2,8 +2,9 @@
   import { onMount } from "svelte";
 
   // https://covidtracking.com/api/states/info
+  export var bookmark;
   let states = [];
-  let state_filter = "";
+  let state_filter = bookmark || "";
 
   $: filtered_result = state_filter
     ? states.filter(s => {

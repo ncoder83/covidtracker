@@ -1,9 +1,10 @@
 <script>
   import { onMount } from "svelte";
   export var bookmark;
+
   let countries = [];
   let as_of;
-  let country_filter = "";
+  let country_filter = bookmark || "";
 
   $: filtered_result = country_filter
     ? countries.filter(c => {
