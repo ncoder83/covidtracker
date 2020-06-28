@@ -9,9 +9,8 @@
 <main>
   <Menu />
   <div class="container mt-5">
-	<Global />
-  <State />
-  <Country />
+    <Global />
+    <Country />
+    <State />
   </div>
-  
 </main>

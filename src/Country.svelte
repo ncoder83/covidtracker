@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-
+  export var bookmark;
   let countries = [];
   let as_of;
   let country_filter = "";

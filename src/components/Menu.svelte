@@ -30,7 +30,9 @@
         <NavLink href="#components/">Components</NavLink>
       </NavItem> -->
         <NavItem>
-          <NavLink href="https://github.com/ncoder83">GitHub</NavLink>
+          <NavLink href="https://github.com/ncoder83/covidtracker">
+            GitHub
+          </NavLink>
         </NavItem>
         <!-- <UncontrolledDropdown nav inNavbar>
         <DropdownToggle nav caret>Options</DropdownToggle>
