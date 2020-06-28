@@ -31,19 +31,25 @@
   <div class="col">
     <Card
       title="Total confirmed"
-      text={total_confirmed}
+      text={total_confirmed || 'N/A'}
       textstyle="text-warning" />
   </div>
   <div class="col">
-    <Card title="New confirmed" text={new_confirmed} textstyle="text-warning" />
+    <Card
+      title="New confirmed"
+      text={new_confirmed || 'N/A'}
+      textstyle="text-warning" />
   </div>
   <div class="col">
     <Card
       title="Total recovered"
-      text={total_recovered}
+      text={total_recovered || 'N/A'}
       textstyle="text-success" />
   </div>
   <div class="col">
-    <Card title="New death" text={new_deaths} textstyle="text-danger" />
+    <Card
+      title="New death"
+      text={new_deaths || 'N/A'}
+      textstyle="text-danger" />
   </div>
 </div>
