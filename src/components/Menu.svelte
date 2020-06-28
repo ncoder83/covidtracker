@@ -21,17 +21,18 @@
 </script>
 
 <Navbar color="dark" dark expand="lg" class="fixed-top">
-  <NavbarBrand href="/">Covid Tracker</NavbarBrand>
-  <NavbarToggler on:click={() => (isOpen = !isOpen)} />
-  <Collapse {isOpen} navbar expand="lg" on:update={handleUpdate}>
-    <Nav class="ml-auto" navbar>
-      <NavItem>
+  <div class="container">
+    <NavbarBrand href="/">Covid Tracker</NavbarBrand>
+    <NavbarToggler on:click={() => (isOpen = !isOpen)} />
+    <Collapse {isOpen} navbar expand="lg" on:update={handleUpdate}>
+      <Nav class="ml-auto" navbar>
+        <!-- <NavItem>
         <NavLink href="#components/">Components</NavLink>
-      </NavItem>
-      <NavItem>
-        <NavLink href="https://github.com/ncoder83">GitHub</NavLink>
-      </NavItem>
-      <UncontrolledDropdown nav inNavbar>
+      </NavItem> -->
+        <NavItem>
+          <NavLink href="https://github.com/ncoder83">GitHub</NavLink>
+        </NavItem>
+        <!-- <UncontrolledDropdown nav inNavbar>
         <DropdownToggle nav caret>Options</DropdownToggle>
         <DropdownMenu right>
           <DropdownItem>Option 1</DropdownItem>
@@ -39,7 +40,8 @@
           <DropdownItem divider />
           <DropdownItem>Reset</DropdownItem>
         </DropdownMenu>
-      </UncontrolledDropdown>
-    </Nav>
-  </Collapse>
+      </UncontrolledDropdown> -->
+      </Nav>
+    </Collapse>
+  </div>
 </Navbar>

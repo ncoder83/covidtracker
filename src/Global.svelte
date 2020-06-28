@@ -26,8 +26,24 @@
   });
 </script>
 
-<h3 class="display-4">Global({as_of})</h3>
-<Card title="Total confirmed" text={total_confirmed} textstyle="text-warning" />
-<Card title="New confirmed" text={new_confirmed} textstyle="text-warning" />
-<Card title="Total recovered" text={total_recovered} textstyle="text-success" />
-<Card title="New death" text={new_deaths} textstyle="text-danger" />
+<h3>Global({as_of})</h3>
+<div class="row">
+  <div class="col">
+    <Card
+      title="Total confirmed"
+      text={total_confirmed}
+      textstyle="text-warning" />
+  </div>
+  <div class="col">
+    <Card title="New confirmed" text={new_confirmed} textstyle="text-warning" />
+  </div>
+  <div class="col">
+    <Card
+      title="Total recovered"
+      text={total_recovered}
+      textstyle="text-success" />
+  </div>
+  <div class="col">
+    <Card title="New death" text={new_deaths} textstyle="text-danger" />
+  </div>
+</div>

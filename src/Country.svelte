@@ -3,6 +3,13 @@
 
   let countries = [];
   let as_of;
+  let country_filter = "";
+
+  $: filtered_result = country_filter
+    ? countries.filter(c => {
+        return c.Country.toLowerCase().startsWith(country_filter.toLowerCase());
+      })
+    : countries;
 
   onMount(() => {
     var requestOptions = {
@@ -20,39 +27,48 @@
   });
 </script>
 
-<h3 class="display-4">Countries ({as_of})</h3>
+<h3>Countries ({as_of})</h3>
 
-<input type="text" class="form-control" placeholder="Filter countries" />
-{#each countries as country}
-  <ul class="list-unstyled">
-    <li>
-      <b>Name: {country.Country}</b>
-      <ul>
-        <li>
-          New confirmed:
-          <span class="text-warning">{country.NewConfirmed}</span>
-        </li>
-        <li>
-          Total Confirmed:
-          <span class="text-warning">{country.TotalConfirmed}</span>
-        </li>
-        <li>
-          New Recovered:
-          <span class="text-success">{country.NewRecovered}</span>
-        </li>
-        <li>
-          Total Recovered:
-          <span class="text-success">{country.TotalRecovered}</span>
-        </li>
-        <li>
-          New Deaths:
-          <span class="text-danger">{country.NewDeaths}</span>
-        </li>
-        <li>
-          Total Deaths:
-          <span class="text-danger">{country.TotalDeaths}</span>
-        </li>
-      </ul>
-    </li>
-  </ul>
-{/each}
+<input
+  type="text"
+  class="form-control"
+  placeholder="Filter countries"
+  bind:value={country_filter} />
+
+<div class="overflow-auto" style="height:300px;">
+
+  {#each filtered_result as country}
+    <ul class="list-unstyled">
+      <li>
+        <b>Name: {country.Country}</b>
+        <ul>
+          <li>
+            New confirmed:
+            <span class="text-warning">{country.NewConfirmed}</span>
+          </li>
+          <li>
+            Total Confirmed:
+            <span class="text-warning">{country.TotalConfirmed}</span>
+          </li>
+          <li>
+            New Recovered:
+            <span class="text-success">{country.NewRecovered}</span>
+          </li>
+          <li>
+            Total Recovered:
+            <span class="text-success">{country.TotalRecovered}</span>
+          </li>
+          <li>
+            New Deaths:
+            <span class="text-danger">{country.NewDeaths}</span>
+          </li>
+          <li>
+            Total Deaths:
+            <span class="text-danger">{country.TotalDeaths}</span>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  {/each}
+
+</div>

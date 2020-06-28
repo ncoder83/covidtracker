@@ -10,7 +10,7 @@
   <Menu />
   <div class="container mt-5">
 	<Global />
-  <!-- <State /> -->
+  <State />
   <Country />
   </div>
   
